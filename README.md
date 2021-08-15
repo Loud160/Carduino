@@ -6,7 +6,7 @@ Carduino is the first Arduino based expansion board that has been designed specf
 
 
 # Table of contents
-* [Supported Arduino](#supported-controller)
+* [Supported Arduino](#supported-Arduino)
 * [Supported clock frequencies](#supported-clock-frequencies)
 * [Bootloader option](#bootloader-option)
 * [BOD option](#bod-option)
@@ -27,7 +27,7 @@ Carduino is the first Arduino based expansion board that has been designed specf
 * **[Minimal setup](#minimal-setup)**
 
 
-## Supported controller
+## Supported Arduino
 * ATmega2561
 * ATmega2560
 * ATmega1281
