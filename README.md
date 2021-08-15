@@ -56,7 +56,7 @@ When you pruchased your Carduino you were given the option also purchase either 
 
 The Carduino bootloader is derived from the Arduino [Megacore bootloader](https://github.com/MCUdude/MegaCore), that is based on the [Optiboot Bootloader](https://github.com/Optiboot/optiboot). The bootloaders have had substantial changes made that improve speed, functionality and cold start boot time 
 
-Some of the key benfites and changes made by these bootloaders can be found below. If you would like to learn more about the specfics of each bootloader you can find complete details on their Github pags linked below:
+Some of the key benfites and changes made by these bootloaders can be found below. If you would like to learn more about the specfics of each bootloader you can find complete details on their Github pags linked below:<br>
 [Megacore On Github](https://github.com/MCUdude/MegaCore)<br>
 [Optiboot On Github](https://github.com/Optiboot/optiboot)
 
