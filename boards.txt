@@ -1,0 +1,201 @@
+###########################################################################################################
+## This file is created by MCUdude for use with MegaCore                                                 ##
+## https://github.com/MCUdude/MegaCore                                                                   ##
+##                                                                                                       ##
+## This is the file where fuse settings, clock frequencies, upload ports, bootloaders and compiler flags ##
+## are located.                                                                                          ##
+##                                                                                                       ##
+## The table below shows the available precompiled bootloaders for the corresponding clock frequencies   ##
+##  and baud rates. Modify the upload.speed field to change baud rate.                                   ##
+##                                                                                                       ##
+## |             | 1000000 | 500000 | 460800 | 250000 | 230400 | 115200 | 57600 | 38400 | 19200 | 9600 | ##
+## |-------------|---------|--------|--------|--------|--------|--------|-------|-------|-------|------| ##
+## | 20 MHz      |         |  X     |        |  X     |        |  X     |       |       |  X    |      | ##
+## | 18.4320 MHz |         |        | X      |        |  X     |  X     |  X    |  X    |  X    |  X   | ##
+## | 16 MHz      |  X      |  X     |        |  X     |        |  X     |       |  X    |  X    |  X   | ##
+## | 14.7456 MHz |         |        | X      |        |  X     |  X     |  X    |  X    |  X    |  X   | ## 
+## | 12 MHz      |         |  X     |        |  X     |        |  X     |  X    |       |  X    |  X   | ##
+## | 11.0592 MHz |         |        | X      |        |  X     |  X     |  X    |  X    |  X    |  X   | ## 
+## | 8 MHz       |  X      |  X     |        |  X     |        |  X     |  X    |  X    |  X    |  X   | ##
+## | 7.3728 MHz  |         |        | X      |        |  X     |  X     |  X    |  X    |  X    |  X   | ## 
+## | 4 MHz       |         |  X     |        |  X     |        |        |       |       |  X    |  X   | ##
+## | 3.6864 MHz  |         |        | X      |        |  X     |  X     |  X    |  X    |  X    |  X   | ## 
+## | 2 MHz       |         |        |        |  X     |        |        |       |       |  X    |  X   | ##
+## | 1.8432 MHz  |         |        |        |        |  X     |  X     |  X    |  X    |  X    |  X   | ## 
+## | 1 MHz       |         |        |        |        |        |        |       |       |       |  X   | ## 
+##                                           |                                                           ##
+###########################################################################################################
+
+# Menu options
+menu.clock=Clock
+menu.BOD=Brown Out Voltage(Requires ISP Programmer To Change)
+menu.eeprom=EEPROM(Requires ISP Programmer To Change)
+menu.LTO=Compiler Optimization 
+menu.pinout=Pinout
+menu.bootloader=Bootloader
+
+
+
+
+
+#####################
+#### ATmega2560  ####
+#####################
+
+# General
+2560.name=Carduino v1.0 using Mega2560 PRO
+2560.upload.tool=avrdude
+2560.upload.maximum_data_size=8192
+2560.bootloader.tool=avrdude
+2560.bootloader.unlock_bits=0x3f
+2560.bootloader.lock_bits=0x0f
+2560.build.core=MCUdude_corefiles
+2560.build.board=AVR_ATmega2560
+2560.build.mcu=atmega2560
+2560.build.bootloader_led=B7
+2560.build.extra_flags={build.clkpr}
+
+# Upload port select
+2560.menu.bootloader.uart0=On Serial 0 (Default)
+2560.menu.bootloader.uart0.upload.maximum_size=261120
+2560.menu.bootloader.uart0.upload.protocol=arduino
+2560.menu.bootloader.uart0.upload.port=UART0
+2560.menu.bootloader.uart0.build.export_merged_output=true
+2560.menu.bootloader.uart0.bootloader.high_fuses=0b1101{bootloader.eesave_bit}110
+2560.menu.bootloader.uart0.bootloader.file=optiboot_flash/bootloaders/{build.mcu}/{build.clock_speed}/optiboot_flash_{build.mcu}_{upload.port}_{upload.speed}_{build.clock_speed}_{build.bootloader_led}_BIGBOOT.hex
+
+2560.menu.bootloader.uart1=On Serial 1
+2560.menu.bootloader.uart1.upload.maximum_size=261120
+2560.menu.bootloader.uart1.upload.protocol=arduino
+2560.menu.bootloader.uart1.upload.port=UART1
+2560.menu.bootloader.uart1.build.export_merged_output=true
+2560.menu.bootloader.uart1.bootloader.high_fuses=0b1101{bootloader.eesave_bit}110
+2560.menu.bootloader.uart1.bootloader.file=optiboot_flash/bootloaders/{build.mcu}/{build.clock_speed}/optiboot_flash_{build.mcu}_{upload.port}_{upload.speed}_{build.clock_speed}_{build.bootloader_led}_BIGBOOT.hex
+
+2560.menu.bootloader.uart2=On Serial 2
+2560.menu.bootloader.uart2.upload.maximum_size=261120
+2560.menu.bootloader.uart2.upload.protocol=arduino
+2560.menu.bootloader.uart2.upload.port=UART2
+2560.menu.bootloader.uart2.build.export_merged_output=true
+2560.menu.bootloader.uart2.bootloader.high_fuses=0b1101{bootloader.eesave_bit}110
+2560.menu.bootloader.uart2.bootloader.file=optiboot_flash/bootloaders/{build.mcu}/{build.clock_speed}/optiboot_flash_{build.mcu}_{upload.port}_{upload.speed}_{build.clock_speed}_{build.bootloader_led}_BIGBOOT.hex
+
+2560.menu.bootloader.uart3=On Serial 3
+2560.menu.bootloader.uart3.upload.maximum_size=261120
+2560.menu.bootloader.uart3.upload.protocol=arduino
+2560.menu.bootloader.uart3.upload.port=UART3
+2560.menu.bootloader.uart3.build.export_merged_output=true
+2560.menu.bootloader.uart3.bootloader.high_fuses=0b1101{bootloader.eesave_bit}110
+2560.menu.bootloader.uart3.bootloader.file=optiboot_flash/bootloaders/{build.mcu}/{build.clock_speed}/optiboot_flash_{build.mcu}_{upload.port}_{upload.speed}_{build.clock_speed}_{build.bootloader_led}_BIGBOOT.hex
+
+2560.menu.bootloader.no_bootloader=No bootloader(Requires ISP To Program)
+2560.menu.bootloader.no_bootloader.upload.maximum_size=262144
+2560.menu.bootloader.no_bootloader.build.export_merged_output=false
+2560.menu.bootloader.no_bootloader.bootloader.high_fuses=0b1101{bootloader.eesave_bit}111
+2560.menu.bootloader.no_bootloader.bootloader.file=empty/empty.hex
+
+# EEPROM
+2560.menu.eeprom.keep=EEPROM retained W/ISP uploading (Default)
+2560.menu.eeprom.keep.bootloader.eesave_bit=0
+2560.menu.eeprom.erase=EEPROM is not retained W/ISP uploading
+2560.menu.eeprom.erase.bootloader.eesave_bit=1
+
+# Pinouts
+2560.menu.pinout.mega_pinout=Carduino V1.0 pinout
+2560.menu.pinout.mega_pinout.build.variant=100-pin-arduino-mega
+#2560.menu.pinout.avr_pinout=AVR pinout
+#2560.menu.pinout.avr_pinout.build.variant=100-pin-avr
+
+# Brown out detection
+2560.menu.BOD.disabled=BOD Disabled (Default)
+2560.menu.BOD.disabled.bootloader.extended_fuses=0xff
+2560.menu.BOD.2v7=BOD 2.7V
+2560.menu.BOD.2v7.bootloader.extended_fuses=0xfd
+2560.menu.BOD.4v3=BOD 4.3V
+2560.menu.BOD.4v3.bootloader.extended_fuses=0xfc
+2560.menu.BOD.1v8=BOD 1.8V
+2560.menu.BOD.1v8.bootloader.extended_fuses=0xfe
+
+
+# Compiler link time optimization
+
+2560.menu.LTO.Os_flto=Link Time Optimization Enabled(Default)
+2560.menu.LTO.Os_flto.compiler.c.extra_flags=-Wextra -flto -g
+2560.menu.LTO.Os_flto.compiler.c.elf.extra_flags=-w -flto -g
+2560.menu.LTO.Os_flto.compiler.cpp.extra_flags=-Wextra -flto -g
+2560.menu.LTO.Os_flto.ltoarcmd=avr-gcc-ar
+
+2560.menu.LTO.Os=Link Time Optimization Disabled
+2560.menu.LTO.Os.compiler.c.extra_flags=
+2560.menu.LTO.Os.compiler.c.elf.extra_flags=
+2560.menu.LTO.Os.compiler.cpp.extra_flags=
+2560.menu.LTO.Os.ltoarcmd=avr-ar
+
+
+# Clock frequencies
+2560.menu.clock.16MHz_external=External 16 MHz (Default)
+2560.menu.clock.16MHz_external.upload.speed=115200
+2560.menu.clock.16MHz_external.bootloader.low_fuses=0xf7
+2560.menu.clock.16MHz_external.build.clkpr=
+2560.menu.clock.16MHz_external.build.clock_speed={build.f_cpu}
+2560.menu.clock.16MHz_external.build.f_cpu=16000000L
+
+2560.menu.clock.20MHz_external=External 20 MHz
+2560.menu.clock.20MHz_external.upload.speed=115200
+2560.menu.clock.20MHz_external.bootloader.low_fuses=0xf7
+2560.menu.clock.20MHz_external.build.clkpr=
+2560.menu.clock.20MHz_external.build.clock_speed={build.f_cpu}
+2560.menu.clock.20MHz_external.build.f_cpu=20000000L
+
+2560.menu.clock.12MHz_external=External 12 MHz
+2560.menu.clock.12MHz_external.upload.speed=57600
+2560.menu.clock.12MHz_external.bootloader.low_fuses=0xf7
+2560.menu.clock.12MHz_external.build.clkpr=
+2560.menu.clock.12MHz_external.build.clock_speed={build.f_cpu}
+2560.menu.clock.12MHz_external.build.f_cpu=12000000L
+
+2560.menu.clock.8MHz_external=External 8 MHz
+2560.menu.clock.8MHz_external.upload.speed=57600
+2560.menu.clock.8MHz_external.bootloader.low_fuses=0xf7
+2560.menu.clock.8MHz_external.build.clkpr=
+2560.menu.clock.8MHz_external.build.clock_speed={build.f_cpu}
+2560.menu.clock.8MHz_external.build.f_cpu=8000000L
+
+2560.menu.clock.4MHz_external=External 4 MHz
+2560.menu.clock.4MHz_external.upload.speed=9600
+2560.menu.clock.4MHz_external.bootloader.low_fuses=0xf7
+2560.menu.clock.4MHz_external.build.clkpr=
+2560.menu.clock.4MHz_external.build.clock_speed={build.f_cpu}
+2560.menu.clock.4MHz_external.build.f_cpu=4000000L
+
+2560.menu.clock.1MHz_external=External 1 MHz
+2560.menu.clock.1MHz_external.upload.speed=9600
+2560.menu.clock.1MHz_external.bootloader.low_fuses=0xf7
+2560.menu.clock.1MHz_external.build.clkpr=
+2560.menu.clock.1MHz_external.build.clock_speed={build.f_cpu}
+2560.menu.clock.1MHz_external.build.f_cpu=1000000L
+
+2560.menu.clock.8MHz_internal=Internal 8 MHz
+2560.menu.clock.8MHz_internal.upload.speed=38400
+2560.menu.clock.8MHz_internal.bootloader.low_fuses=0xe2
+2560.menu.clock.8MHz_internal.build.clkpr=
+2560.menu.clock.8MHz_internal.build.clock_speed={build.f_cpu}
+2560.menu.clock.8MHz_internal.build.f_cpu=8000000L
+
+2560.menu.clock.4MHz_internal=Internal 4 MHz
+2560.menu.clock.4MHz_internal.upload.speed=9600
+2560.menu.clock.4MHz_internal.bootloader.low_fuses=0xe2
+2560.menu.clock.4MHz_internal.build.clkpr=-DOSC_PRESCALER=0x01
+2560.menu.clock.4MHz_internal.build.clock_speed=8000000L
+2560.menu.clock.4MHz_internal.build.f_cpu=4000000L
+
+2560.menu.clock.1MHz_internal=Internal 1 MHz
+2560.menu.clock.1MHz_internal.upload.speed=9600
+2560.menu.clock.1MHz_internal.bootloader.low_fuses=0x62
+2560.menu.clock.1MHz_internal.build.clkpr=
+2560.menu.clock.1MHz_internal.build.clock_speed={build.f_cpu}
+2560.menu.clock.1MHz_internal.build.f_cpu=1000000L
+
+
+
+
