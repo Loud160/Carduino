@@ -62,14 +62,8 @@ Some of the key benfites and changes made by these bootloaders can be found belo
 <br><br>
   **Note - To change some specfic settings you will need to use an ISP programmer and hit **Burn bootloader** for the new settings to be applied. <BR>><BR>
   
-  ###Bootloader Features
- 
+ **Bootloader Features**
 
-
-MegaCore lets you select which serial port you want to use for uploading. UART0 is the default port for all targets, but any hardware serial port may be used.
-If your application doesn't need or require a bootloader for uploading code you can also choose to disable this by selecting *No bootloader*. This frees 1024 bytes of flash memory.
-
-Note that you have need to connect a programmer and hit **Burn bootloader** if you want to change any of the *Upload port settings*.
 
 
 ## BOD option
