@@ -33,7 +33,7 @@ These boards are considerbally smaller then an Arduino UNO and also provide a gr
 more functionality then the Uno. The Pro and Promini have all the advantages of the 
 full size Arduino Mega 2560 but with a much smaller footprint so it takes up less space.
 <br/> <br/>
-The MEGA 2650 Pro/MEGA 2650 Promini both feature the ATmega2560-16AU processor. interrupts
+The MEGA 2650 Pro/MEGA 2650 Promini both feature the ATmega2560-16AU processor. 
 
 |               | Mega2560 |   UNO    |
 |-------------- |----------|----------|
