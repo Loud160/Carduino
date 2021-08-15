@@ -62,11 +62,9 @@ Some of the key benfites and changes made by these bootloaders can be found belo
 <br><br>
   **Note - To change some specfic settings you will need to use an ISP programmer and hit **Burn bootloader** for the new settings to be applied. <BR>><BR>
   
- **Bootloader Features**
-
-
-
-## BOD option
+ 
+## Bootloader Features
+  **BOD option**
 Brown out detection, or BOD for short lets the microcontroller sense the input voltage and shut down if the voltage goes below the brown out setting. To change the BOD settings you'll have to connect an ISP programmer and hit "Burn bootloader". Below is a table that shows the available BOD options:
 <br/>
 
