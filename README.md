@@ -63,22 +63,22 @@ Some of the key benfites and changes made by these bootloaders can be found belo
   **Note - To change some specfic settings you will need to use an ISP programmer and hit **Burn bootloader** for the new settings to be applied. <BR>><BR>
   
  
-## Bootloader Features
-  **BOD option**
+## Bootloader Features<br>
+  **BOD option**<br>
 Brown out detection, or BOD for short lets the microcontroller sense the input voltage and shut down if the voltage goes below the brown out setting. To change the BOD settings you'll have to connect an ISP programmer and hit "Burn bootloader". Below is a table that shows the available BOD options:
 <br/>
 
-|  Carduino BOD   | 
+|  BOD Options    | 
 |-----------------|
 | 4.3V            |
 | 2.7V            |
 | 1.8V            |
 |**Disabled**     |
 
+<BR><BR>
 
 
-
-## EEPROM option
+**EEPROM option**<br>
 If you want the EEPROM to be erased every time you burn the bootloader or upload using a programmer, you can turn off this option. You'll have to connect an ISP programmer and hit "Burn bootloader" to enable or disable EEPROM retain. Note that when uploading using a bootloader, the EEPROM will always be retained.
 
 
