@@ -68,12 +68,12 @@ Some of the key benfites and changes made by these bootloaders can be found belo
 Brown out detection, or BOD for short lets the microcontroller sense the input voltage and shut down if the voltage goes below the brown out setting. To change the BOD settings you'll have to connect an ISP programmer and hit "Burn bootloader". Below is a table that shows the available BOD options:
 <br/>
 
-|    Carduino BOD     | 
-|---------------------|
-| **4.3V**            |
-| **2.7V**            |
-| **1.8V**            |
-|** Disabled**        |
+|  Carduino BOD   | 
+|-----------------|
+| 4.3V            |
+| 2.7V            |
+| 1.8V            |
+|**Disabled**     |
 
 
 
