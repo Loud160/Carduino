@@ -54,7 +54,7 @@ The MEGA 2650 Pro/MEGA 2650 Promini both feature the ATmega2560-16AU processor.
 ## Recommended Bootloader
 When you pruchased your Carduino you were given the option also purchase either a MEGA 2650 Pro(Embed) or a MEGA 2650 Promini. If you purchased your Arduino from us then you will already be using the recommended bootloader. If you have chosen to supply your own, it is strongly suggested you install the bootloder provided in this library. With out this boot loader a number of the examples may not work with your Arduino and you will be lacking a great number of improvments over the conventional Arduino bootloader. 
 
-The recommended Carduino bootloader is based on the Arduino [Megacore bootloader](https://github.com/MCUdude/MegaCore), and that Bootloader is based on the [Optiboot Bootloader](https://github.com/Optiboot/optiboot)
+The Carduino bootloader is based on the Arduino [Megacore bootloader](https://github.com/MCUdude/MegaCore), that is based on the [Optiboot Bootloader](https://github.com/Optiboot/optiboot)
 MegaCore lets you select which serial port you want to use for uploading. UART0 is the default port for all targets, but any hardware serial port may be used.
 If your application doesn't need or require a bootloader for uploading code you can also choose to disable this by selecting *No bootloader*. This frees 1024 bytes of flash memory.
 
