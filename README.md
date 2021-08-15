@@ -28,31 +28,26 @@ Carduino is the first Arduino based expansion board that has been designed specf
 
 
 ## Supported Arduino
-* ATmega2561
-* ATmega2560
-* ATmega1281
-* ATmega1280
-* ATmega640
-* ATmega128
-* ATmega64
-* AT90CAN128
-* AT90CAN64
-* AT90CAN32
-
-(All variants - A, L, V)
+Carduino is designed to work with the Arduino 'MEGA 2650 Pro' & 'Mega 2560 Promini'
+These boards are considerbally smaller then an Arduino UNO and also provide a great deal 
+more functionality then the Uno. The Pro and Promini have all the advantages of the 
+full size Arduino Mega 2560 but with a much smaller footprint so it takes up less space.
 <br/> <br/>
-Can't decide what microcontroller to choose? Have a look at the specification table below:
+The MEGA 2650 Pro/MEGA 2650 Promini both feature the ATmega2560-16AU processor. interrupts
 
-|              | Mega2560 | Mega1280 | Mega640 | Mega2561 | Mega1281 | Mega128<br/>CAN128 | Mega64<br/>CAN64 | CAN32 |
-|--------------|----------|----------|---------|----------|----------|--------------------|------------------|-------|
-| **Flash**    | 256kB    | 128kB    | 64kB    | 256kB    | 128kB    | 128kB              | 64kB             | 32kB  |
-| **RAM**      | 8kB      | 8kB      | 8kB     | 8kB      | 8kB      | 4kB                | 4kB              | 2kB   |
-| **EEPROM**   | 4kB      | 4kB      | 4kB     | 4kB      | 4kB      | 4kB                | 2kB              | 1kB   |
-| **IO pins**  | 70/86 *  | 70/86 *  | 70/86 * | 54       | 54       | 53                 | 53               | 53    |
-| **PWM pins** | 15       | 15       | 15      | 8        | 8        | 7                  | 7                | 7     |
-| **LED pin**  | PB7      | PB7      | PB7     | PB5      | PB5      | PB5                | PB5              | PB5   |
+|               | Mega2560 |   UNO    |
+|-------------- |----------|----------|
+| **Flash**     | 256kB    | 32kb     |
+| **RAM**       | 8kB      | 2kB      |
+| **EEPROM**    | 4kB      | 1kB      |
+| **IO pins**   | 70       | 23       |
+| **PWM pins**  | 15       | 6        |
+|**Analog pins**| 16       | 6        |
+| **Interrupts**| 6        | 2        |
+| **Serials**   | 4        | 1        |
+| **Timers**    | 6        | 3        |
 
-<b>*</b> pin 70-85 is not broken out on the Arduino Mega. Make sure to check out the [*AVR style pinout*](#atmega64012802560) for a cleaner an more logical pinout.
+
 
 
 ## Supported clock frequencies
