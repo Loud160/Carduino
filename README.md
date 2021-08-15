@@ -28,7 +28,7 @@ Carduino is the first Arduino based expansion board that has been designed specf
 
 
 ## Supported Arduino
-Carduino is designed to work with the Arduino 'MEGA 2650 Pro' & 'Mega 2560 Promini'
+Carduino is designed to work with the Arduino 'MEGA 2650 Pro' & 'Mega 2560 Promini'.
 These boards are considerbally smaller then an Arduino UNO and also provide a great deal 
 more functionality then the Uno. The Pro and Promini have all the advantages of the 
 full size Arduino Mega 2560 but with a much smaller footprint so it takes up less space.
