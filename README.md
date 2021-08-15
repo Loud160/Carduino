@@ -8,7 +8,7 @@ Carduino is the first Arduino based expansion board that has been designed specf
 # Table of contents
 * [Supported Arduino](#supported-Arduino)
 * [Recommended Bootloader](#Recommended-Bootloader)
-* [BOD option](#bod-option)
+* [Bootloader Features](#Bootloader-Features)
 * [EEPROM retain option](#eeprom-option)
 * [Link time optimization / LTO](#link-time-optimization--lto)
 * [Printf support](#printf-support)
@@ -68,16 +68,14 @@ Some of the key benfites and changes made by these bootloaders can be found belo
 Brown out detection, or BOD for short lets the microcontroller sense the input voltage and shut down if the voltage goes below the brown out setting. To change the BOD settings you'll have to connect an ISP programmer and hit "Burn bootloader". Below is a table that shows the available BOD options:
 <br/>
 
-| ATmega640/1280/2560 | ATmega1281/2561 | ATmega64/128  | AT90CAN32/64/128 |
-|---------------------|-----------------|---------------|------------------|
-| 4.3V                | 4.3V            | 4.0V          | 4.1V             |
-| 2.7V                | 2.7V            | 2.7V          | 4.0V             |
-| 1.8V                | 1.8V            |               | 3.9V             |
-|                     |                 |               | 3.8V             |
-|                     |                 |               | 2.7V             |
-|                     |                 |               | 2.6V             |
-|                     |                 |               | 2.5V             |
-| Disabled            | Disabled        | Disabled      | Disabled         |
+|    Carduino BOD     | 
+|---------------------|
+| **4.3V**            |
+| **2.7V**            |
+| **1.8V**            |
+|** Disabled**        |
+
+
 
 
 ## EEPROM option
