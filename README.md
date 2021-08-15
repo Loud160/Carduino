@@ -7,8 +7,7 @@ Carduino is the first Arduino based expansion board that has been designed specf
 
 # Table of contents
 * [Supported Arduino](#supported-Arduino)
-* [Supported clock frequencies](#supported-clock-frequencies)
-* [Bootloader option](#bootloader-option)
+* [Recommended Bootloader](#Recommended-Bootloader)
 * [BOD option](#bod-option)
 * [EEPROM retain option](#eeprom-option)
 * [Link time optimization / LTO](#link-time-optimization--lto)
@@ -50,37 +49,14 @@ The MEGA 2650 Pro/MEGA 2650 Promini both feature the ATmega2560-16AU processor.
 
 
 
-## Supported clock frequencies
 
-MegaCore supports a variety of different clock frequencies. Select the microcontroller in the boards menu, then select the clock frequency. You'll have to hit "Burn bootloader" in order to set the correct fuses and upload the correct bootloader.
-Make sure you connect an ISP programmer, and select the correct one in the "Programmers" menu. For time critical operations an external crystal/oscillator is recommended.
 
-You might experience upload issues when using the internal oscillator. It's factory calibrated but may be a little "off" depending on the calibration, ambient temperature and operating voltage. If uploading failes while using the 8 MHz internal oscillator you have these options:
-* Edit the baudrate line in the [boards.txt](https://github.com/MCUdude/MegaCore/blob/6098efe55de668ebb19f538a0b86a2c43e3dec07/avr/boards.txt#L802) file, and choose either 115200, 57600, 38400 or 19200 baud.
-* Upload the code using a programmer (USBasp, USBtinyISP etc.) or skip the bootloader by holding down the shift key while clicking the "Upload" button
-* Use the 4, 2 or 1 MHz option instead
+## Recommended Bootloader
+When you pruchased your Carduino you were given the option also purchase either a MEGA 2650 Pro(Embed) or a MEGA 2650 Promini. If you purchased your Arduino from us then you will already be using the recommended bootloader. If you have chosen to supply your own, it is strongly suggested you install the bootloder provided in this library. With out this boot loader a number of the examples may not work with your Arduino and you will be lacking a great number of improvments over the conventional Arduino bootloader. 
 
-| Frequency   | Oscillator type             | Speed  | Comment                                           |
-|-------------|-----------------------------|--------|---------------------------------------------------|
-| 16 MHz      | External crystal/oscillator | 115200 | Default clock on most AVR based Arduino boards    |
-| 20 MHz      | External crystal/oscillator | 115200 |                                                   |
-| 18.4320 MHz | External crystal/oscillator | 115200 | Great clock for UART communication with no error  |
-| 14.7456 MHz | External crystal/oscillator | 115200 | Great clock for UART communication with no error  |
-| 12 MHz      | External crystal/oscillator | 57600  | Useful when working with USB 1.1 (12 Mbit/s)      |
-| 11.0592 MHz | External crystal/oscillator | 115200 | Great clock for UART communication with no error  |
-| 8 MHz       | External crystal/oscillator | 57600  | Common clock when working with 3.3V               |
-| 7.3728 MHz  | External crystal/oscillator | 115200 | Great clock for UART communication with no error  |
-| 4 MHz       | External crystal/oscillator | 9600   |                                                   |
-| 3.6864 MHz  | External crystal/oscillator | 115200 | Great clock for UART communication with no error  |
-| 2 MHz       | External crystal/oscillator | 9600   |                                                   |
-| 1.8432 MHz  | External crystal/oscillator | 115200 | Great clock for UART communication with no error  |
-| 1 MHz       | External crystal/oscillator | 9600   |                                                   |
-| 8 MHz       | Internal oscillator         | 38400  | Might cause UART upload issues. See comment above |
-| 4 MHz       | Internal oscillator         | 9600   | Derived from the 8 MHz internal oscillator        |
-| 2 MHz       | Internal oscillator         | 9600   | Derived from the 8 MHz internal oscillator        |
-| 1 MHz       | Internal oscillator         | 9600   | Derived from the 8 MHz internal oscillator        |
+The recommended Carduino bootloader is based on the Arduino Megacore bootloader, and that Bootloader is based on the Arduino Optiboot Bootloader. 
 
-## Bootloader option
+[I'm a relative reference to a repository file](../blob/master/LICENSE)
 MegaCore lets you select which serial port you want to use for uploading. UART0 is the default port for all targets, but any hardware serial port may be used.
 If your application doesn't need or require a bootloader for uploading code you can also choose to disable this by selecting *No bootloader*. This frees 1024 bytes of flash memory.
 
