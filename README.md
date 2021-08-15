@@ -56,7 +56,7 @@ When you pruchased your Carduino you were given the option also purchase either 
 
 The recommended Carduino bootloader is based on the Arduino Megacore bootloader, and that Bootloader is based on the Arduino Optiboot Bootloader. 
 
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
+[Megacore bootloader](https://github.com/MCUdude/MegaCore/tree/master/avr)
 MegaCore lets you select which serial port you want to use for uploading. UART0 is the default port for all targets, but any hardware serial port may be used.
 If your application doesn't need or require a bootloader for uploading code you can also choose to disable this by selecting *No bootloader*. This frees 1024 bytes of flash memory.
 
