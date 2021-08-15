@@ -1,12 +1,12 @@
-# MegaCore
-[![Build Status](https://travis-ci.org/MCUdude/MegaCore.svg?branch=master)](https://travis-ci.org/MCUdude/MegaCore) [![MegaCore forum thread](https://img.shields.io/badge/support-forum-blue.svg)](https://forum.arduino.cc/index.php?topic=386733.0)
+# Carduino
 
-An Arduino core for ATmega64, ATmega128, ATmega640, ATmega1280, ATmega1281, ATmega2560, ATmega2561, AT90CAN32, AT90CAN64 and AT90CAN128, all running [Optiboot flash](#write-to-own-flash). This core requires at least Arduino IDE v1.6, where v1.8.5+ is recommended. <br/>
-If you're into "pure" AVR programming, I'm happy to tell you that all relevant keywords are being highlighted by the IDE through a separate keywords file. Make sure to check out the [example files](https://github.com/MCUdude/MegaCore/tree/master/avr/libraries/AVR_examples/examples) (File > Examples > AVR C code examples).
+Carduino is the first Arduino based expansion board that has been designed specfically for use in automotive applactions. When you look at Arduino shields they all have one thing in common, they sit on top of your Arduino. What makes Carduino diffrent, is then rather then plugging a shield into your Arduino, you are now plugging your Arduino into an expansion board. This expansion board is designed to accomidate multiple Arduino shields simultaneously while also incorporating a number of smaller expansion modules that can be used in conjunction with existing shields to greatly expand the possibiltys of what your able to create.The Carduino has also included quite a bit of room on it that allow you to build a number of your own circuits with out the need for a bread board once your project is complete. The Carduino is a lot more then just an expansion board, a number of Arduino libaries has been rewritten to work with the altered pinout Carduino uses to make this as simple as possible to get started with. 
+
+  
 
 
 # Table of contents
-* [Supported microcontrollers](#supported-microcontrollers)
+* [Supported Arduino](#supported-controller)
 * [Supported clock frequencies](#supported-clock-frequencies)
 * [Bootloader option](#bootloader-option)
 * [BOD option](#bod-option)
@@ -27,7 +27,7 @@ If you're into "pure" AVR programming, I'm happy to tell you that all relevant k
 * **[Minimal setup](#minimal-setup)**
 
 
-## Supported microcontrollers:
+## Supported controller
 * ATmega2561
 * ATmega2560
 * ATmega1281
