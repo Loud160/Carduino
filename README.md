@@ -101,7 +101,7 @@ I encourage you to try the new LTO option and see how much smaller your code get
   
 **Wiring Reference(wiring.h)**<BR>>
 Thanks to improvments made by Megacore several Wiring functions that are missing from the Arduino core have been added to enhance this core's functionality a bit further. These functions can be used as "regular" Arduino functions, there's no need to include an external library. A list for the missing Wiring functions used in the ATMega2560 chip can be found below. <br><BR>
-**Function list**
+**Function Added**
 * portMode()
 * portRead()
 * portWrite()
@@ -113,15 +113,8 @@ Thanks to improvments made by Megacore several Wiring functions that are missing
 <BR><BR><BR>
 
 
-
-
-
-
-
-
-## Pin macros
-Note that you don't have to use the digital pin numbers to refer to the pins. You can also use some predefined macros that maps "Arduino pins" to the port and port number:
-
+**Pin macros**<br>
+You don't have to use the digital pin numbers to reference each of your Arduinos pins. You can also use predefined macros that maps "Arduino pins" to the port and port number:<BR>
 ```c++
 // Use PIN_PE0 macro to refer to pin PE0 (Arduino pin 0)
 digitalWrite(PIN_PE0, HIGH);
