@@ -15,7 +15,7 @@ Carduino is the first Arduino based expansion board that has been designed specf
   - [EEPROM option](#EEPROM-option)
   - [Link time optimization](#Link-time-optimization)
   - [Wiring Reference(wiring.h)](#Wiring-Reference(wiring.h))
-  - [Pin macros](#Pin-macrosn)
+  - [Pin Macros](#Pin-Macros)
 * [EEPROM retain option](#eeprom-option)
 * [Link time optimization / LTO](#link-time-optimization--lto)
 * [Printf support](#printf-support)
@@ -117,7 +117,7 @@ Thanks to improvments made by Megacore several Wiring functions that are missing
 <BR><BR><BR>
 
 
-#### Pin macros
+#### Pin Macros
 You don't have to use the digital pin numbers to reference each of your Arduinos pins. You can also use predefined macros that maps "Arduino pins" to the port and port number:<BR>
 ```c++
 // Use PIN_PE0 macro to refer to pin PE0 (Arduino pin 0)
