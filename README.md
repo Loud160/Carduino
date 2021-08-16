@@ -19,11 +19,8 @@ Carduino is the first Arduino based expansion board that has been designed specf
 * **[How to install](#how-to-install)**
   - [Boards Manager Installation](#boards-manager-installation)
   - [Manual Installation](#manual-installation)
-  - [PlatformIO](#platformio)
-* **[Getting started with MegaCore](#getting-started-with-megacore)**
-* [Wiring reference](#wiring-reference)
-* **[Pinout](#pinout)**
-* **[Minimal setup](#minimal-setup)**
+* [Getting started with Carduino](#Getting-started-with-Carduino)
+
 
 
 ## Supported Arduino
@@ -148,24 +145,8 @@ Ok, so you're downloaded and installed Carduino, but how to get started? Here's 
 * Connect a USB cable between your PC and the Carduino's USB C connector..(If your using a MEGA2560 Pro(embed) you can also connect a USB directly to the Arduino)
 * In the strip menu at the top of your Arduino IDE, seledt **Tools > Board** menu item, and select the Carduino board you are using
 * Select In the tools menu you will also need to  select what com port your Carduino is connected to
-* In the strip menu at the top of your Arduino IDE, select **File >Example>**Scroll down and find the Carduino board listing then select **Basic Code Examples>Carduino Blink**
+* In the strip menu at the top of your Arduino IDE, select **File >Example>** Scroll down and find the Carduino board listing then select **Basic Code Examples>Carduino Blink**
 * The example code for the Carduino blink example will be loaded
 * In the strip menu at the top of your Arduino IDE, seledt **Tools >Upload** and click on Upload
 * The two center LED's on your Carduino board are now be blinking!
-  
-  - Keep your programmer connected, and hold down the `shift` button while clicking **Upload**. This will erase the bootloader and upload your code using the programmer tool.
-
-
-
-
-
-
-
-
-### ATmega640/1280/2560
-Beside including the original Arduino Mega pinout for the ATmega640/1280/2560, I've also added an *AVR style pinout*, which is a more straight forward and logical pinout if you're not working with the Arduino Mega board. For the default Arduino Mega pinout, the standard LED pin is assigned to Arduino pin 13, and for the AVR pin it's assigned to pin 22.
-<b>Click to enlarge:</b> <br/>
-<img src="https://i.imgur.com/sweRJs3.jpg" width="280"> <img src="https://i.imgur.com/O7WtWAj.jpg" width="280"> <img src="http://i.imgur.com/DfR7arD.jpg" width="280">
-
-
 
