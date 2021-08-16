@@ -99,9 +99,8 @@ After Arduino IDE 1.6.11 where released, there have been support for link time o
 I encourage you to try the new LTO option and see how much smaller your code gets! Note that you don't need to hit "Burn Bootloader" in order to enable LTO. Simply enable it in the "Tools" menu, and your code is ready for compilation. If you want to read more about LTO and GCC flags in general, head over to the [GNU GCC website](https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html)!
   
   
-**Wiring reference**
-Thanks to some changes made by Megacore several missing Wireing functions that are missing from the Arduino core have been added and extend this core's functionality a bit further. A list for several of the missing Wiring functions used in the ATMega2560 chip can be found below. These functions can be used as "regular" Arduino functions, there's no need to include an external library.<br><BR>
-
+**Wiring Reference(wiring.h)**<BR>>
+Thanks to improvments made by Megacore several Wiring functions that are missing from the Arduino core have been added to enhance this core's functionality a bit further. These functions can be used as "regular" Arduino functions, there's no need to include an external library. A list for the missing Wiring functions used in the ATMega2560 chip can be found below. <br>
 **Function list**
 * portMode()
 * portRead()
