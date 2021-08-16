@@ -107,6 +107,7 @@ Thanks to improvments made by Megacore several Wiring functions that are missing
 * noSleep()
 * enablePower()
 * disablePower() 
+  Note - More information reguarding how to use these functions can be found [HERE](https://github.com/Loud160/Carduino/blob/main/Wiring_reference.md) 
 <BR><BR><BR>
 
 
