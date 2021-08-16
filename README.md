@@ -8,7 +8,7 @@ Carduino is the first Arduino based expansion board that has been designed specf
 # Table of contents
 * [Supported Arduino](#supported-Arduino)
 * [Recommended Bootloader](#Recommended-Bootloader)
-* **[Bootloader Features](#Bootloader-Features)
+* [Bootloader Features](#Bootloader-Features)
   - [Boards Manager Installation](#boards-manager-installation)
   - [Manual Installation](#manual-installation)
 * [EEPROM retain option](#eeprom-option)
