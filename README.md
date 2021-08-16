@@ -77,28 +77,28 @@ Brown out detection, or BOD for short lets the microcontroller sense the input v
 <BR><BR>
 
 
- ###Printf support
+#### Printf support
 Unlike official Arduino core, Carduino has native support for printf with out any additional libraries. If you're not familiar with printf you can read more about it [HERE](https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm). Printf has been added to the Print class and will work with any library that inherit Print. Printf is a standard C function that lets you display formated text much easier than using Arduino's built-in print and println. <br>
   *Note - The included printf support does NOT support the use of floats or doubles. <br>This is a limitation of the avr-libc printf implementation on AVR microcontrollers.<br><br>
 
 To display formated information, simply use `Serial.printf("Time since start: %ld\n", millis());`. The printf function makes is easy to display information on most types of LED and OLED displays. A few of the libraries it works well using the printf function are the LiquidCrystal LCD library and the U8G2 graphical LCD library.
   <br><br>
   
-  **Write To Flash While Running**
+#### Write To Flash While Running
 The Carduino bootloader is able to provide several new benfits taken from the Optiboot bootloader core, one of these notable benfits is the ability to write to your boards flash memory while a program is running on your Arduino. This works very similar to how the eeprom works however the flash memory is far more durable and can with stand thousands of writes with out any signs of were like an eeprom would be. <br><br>
   
 This means that values from a sensor for example can be stored in the flash memory directly and will persist even with out power. There are several examples of how to impliment this type of functionality that can be found in the examples directory. This function is a bit more advanced then working with Arduino's eeprom but the examples will clearly show you how to impliment the methods into your existing code. <br><br>
 
   
-  **EEPROM option**<br>
+#### EEPROM option
 If you want the EEPROM to be erased every time you burn the bootloader or upload using a programmer, you can turn off this option. You'll have to connect an ISP programmer and hit "Burn bootloader" to enable or disable EEPROM retain. Note that when uploading using a bootloader, the EEPROM will always be retained.<br><br>
   
-**Link time optimization(LTO)**<br>
+#### Link time optimization(LTO)
 After Arduino IDE 1.6.11 where released, there have been support for link time optimization or LTO for short. The LTO optimizes the code at link time, making the code (often) significantly smaller without making it "slower". In Arduino IDE 1.6.11 and newer LTO is enabled by default. I've chosen to disable this by default to make sure the core keep its backwards compatibility. Enabling LTO in IDE 1.6.10 and older will return an error.
 I encourage you to try the new LTO option and see how much smaller your code gets! Note that you don't need to hit "Burn Bootloader" in order to enable LTO. Simply enable it in the "Tools" menu, and your code is ready for compilation. If you want to read more about LTO and GCC flags in general, head over to the [GNU GCC website](https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html)!
   
   
-**Wiring Reference(wiring.h)**<BR>>
+#### Wiring Reference(wiring.h)
 Thanks to improvments made by Megacore several Wiring functions that are missing from the Arduino core have been added to enhance this core's functionality a bit further. These functions can be used as "regular" Arduino functions, there's no need to include an external library. A list for the missing Wiring functions used in the ATMega2560 chip can be found below. <br><BR>
 **Function Added**
 * portMode()
@@ -112,7 +112,7 @@ Thanks to improvments made by Megacore several Wiring functions that are missing
 <BR><BR><BR>
 
 
-**Pin macros**<br>
+#### Pin macros
 You don't have to use the digital pin numbers to reference each of your Arduinos pins. You can also use predefined macros that maps "Arduino pins" to the port and port number:<BR>
 ```c++
 // Use PIN_PE0 macro to refer to pin PE0 (Arduino pin 0)
