@@ -16,8 +16,8 @@
           "category": "Contributed",
           "url": "https://raw.githubusercontent.com/Loud160/Carduino/main/Carduino-1.0.0.tar.gz",
           "archiveFileName": "Carduino-1.0.0.tar.gz",
-          "checksum": "SHA-256:943833353f5d7d815fd66f9bb827a9cfd3823cc36ce91cb026ac8033f4d4df96",
-          "size": "3015888",
+          "checksum": "SHA-256:1cd155a4917784bf20f2761fcbec285480214b3d799b35520b16707d98e4b6fd",
+          "size": "3015886",
           "boards": [
             {
               "name": "Carduino v1.0 W/MEGA2560 Pro"
