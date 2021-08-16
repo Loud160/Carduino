@@ -60,7 +60,7 @@ Some of the key benfites and changes made by these bootloaders can be found belo
 [Megacore On Github](https://github.com/MCUdude/MegaCore)<br>
 [Optiboot On Github](https://github.com/Optiboot/optiboot)
 <br><br>
-  **Note - To change some specfic settings you will need to use an ISP programmer and hit **Burn bootloader** for the new settings to be applied. <BR>><BR>
+  **Note - To change some specfic settings you will need to use an ISP programmer and hit **Burn bootloader** for the new settings to be applied. <BR><BR>
   
  
 ## Bootloader Features<br>
@@ -80,19 +80,38 @@ Brown out detection, or BOD for short lets the microcontroller sense the input v
 
  **Printf support**<br>
 Unlike official Arduino core, Carduino has native support for printf with out any additional libraries. If you're not familiar with printf you can read more about it [HERE](https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm). Printf has been added to the Print class and will work with any library that inherit Print. Printf is a standard C function that lets you display formated text much easier than using Arduino's built-in print and println. <br>
-  *Note - The included printf support does NOT support the use of floats or doubles. This is a limitation of the avr-libc printf implementation on AVR microcontrollers.
+  *Note - The included printf support does NOT support the use of floats or doubles. <br>This is a limitation of the avr-libc printf implementation on AVR microcontrollers.<br><br>
 
 To display formated information, simply use `Serial.printf("Time since start: %ld\n", millis());`. The printf function makes is easy to display information on most types of LED and OLED displays. A few of the libraries it works well using the printf function are the LiquidCrystal LCD library and the U8G2 graphical LCD library.
   <br><br>
   
-**Link time optimization / LTO**
+  **Write To Flash While Running**
+The Carduino bootloader is able to provide several new benfits taken from the Optiboot bootloader core, one of these notable benfits is the ability to write to your boards flash memory while a program is running on your Arduino. This works very similar to how the eeprom works however the flash memory is far more durable and can with stand thousands of writes with out any signs of were like an eeprom would be. <br><br>
+  
+This means that values from a sensor for example can be stored in the flash memory directly and will persist even with out power. There are several examples of how to impliment this type of functionality that can be found in the examples directory. This function is a bit more advanced then working with Arduino's eeprom but the examples will clearly show you how to impliment the methods into your existing code. <br><br>
+
+  
+  **EEPROM option**<br>
+If you want the EEPROM to be erased every time you burn the bootloader or upload using a programmer, you can turn off this option. You'll have to connect an ISP programmer and hit "Burn bootloader" to enable or disable EEPROM retain. Note that when uploading using a bootloader, the EEPROM will always be retained.<br><br>
+  
+**Link time optimization(LTO)**<br>
 After Arduino IDE 1.6.11 where released, there have been support for link time optimization or LTO for short. The LTO optimizes the code at link time, making the code (often) significantly smaller without making it "slower". In Arduino IDE 1.6.11 and newer LTO is enabled by default. I've chosen to disable this by default to make sure the core keep its backwards compatibility. Enabling LTO in IDE 1.6.10 and older will return an error.
 I encourage you to try the new LTO option and see how much smaller your code gets! Note that you don't need to hit "Burn Bootloader" in order to enable LTO. Simply enable it in the "Tools" menu, and your code is ready for compilation. If you want to read more about LTO and GCC flags in general, head over to the [GNU GCC website](https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html)!
   
   
-  
-**EEPROM option**<br>
-If you want the EEPROM to be erased every time you burn the bootloader or upload using a programmer, you can turn off this option. You'll have to connect an ISP programmer and hit "Burn bootloader" to enable or disable EEPROM retain. Note that when uploading using a bootloader, the EEPROM will always be retained.
+**Wiring reference**
+Thanks to some changes made by Megacore several missing Wireing functions that are missing from the Arduino core have been added and extend this core's functionality a bit further. A list for several of the missing Wiring functions used in the ATMega2560 chip can be found below. These functions can be used as "regular" Arduino functions, there's no need to include an external library.<br><BR>
+
+**Function list**
+* portMode()
+* portRead()
+* portWrite()
+* sleepMode()
+* sleep()
+* noSleep()
+* enablePower()
+* disablePower() 
+
 
 
 
@@ -217,10 +236,9 @@ I hope you find this useful, because they really are!
 ### For further information please view the [Wiring reference page](https://github.com/MCUdude/MegaCore/blob/master/Wiring_reference.md)!
 
 
-## Pinout
 
-### ATmega64/128/1281/2561/CAN32/CAN64/CAN128
-Since there are no standardized Arduino pinout for this chip family, I've created one. I've tried to make it as simple and logical as possible. This pinout makes great sense if you're buying this [cheap breakout boards](http://www.ebay.com/itm/381547311629) at Ebay or AliExpress (just make sure to remove C3 in order to get auto reset working). The standard LED pin is assigned to Arduino pin 13, and will blink twice if you hit the reset button.
+
+
 
 ### ATmega640/1280/2560
 Beside including the original Arduino Mega pinout for the ATmega640/1280/2560, I've also added an *AVR style pinout*, which is a more straight forward and logical pinout if you're not working with the Arduino Mega board. For the default Arduino Mega pinout, the standard LED pin is assigned to Arduino pin 13, and for the AVR pin it's assigned to pin 22.
@@ -229,7 +247,3 @@ Beside including the original Arduino Mega pinout for the ATmega640/1280/2560, I
 
 
 
-## Minimal setup
-Here's some simple schematics for the ATmega64/128/1281/2561/CAN32/CAN64/CAN128 and ATmega640/1280/2560 showing a minimal setup using an external crystal. Omit the crystal and the two 22pF capacitors if you're using the internal oscillator. <br/>
-<b>Click to enlarge:</b> <br/>
-<img src="https://i.imgur.com/BkJfIWC.png" width="400">    <img src="http://i.imgur.com/gQS1ORv.png" width="400">
