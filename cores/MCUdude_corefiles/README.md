@@ -20,14 +20,6 @@ micros, delay, delayMicroseconds)
 * 1 MHz
 
 
-Internal Clock speeds that are usable but may not provide accurate timing for (millis,
-micros, delay, delayMicroseconds)
-* 8 MHz
-* 4 MHz
-* 1 MHz
-
-
-
 ### Exactness of `delayMicroseconds()`
 
 The `delayMicroseconds(unsigned int us)` implementation is exact up to a few
