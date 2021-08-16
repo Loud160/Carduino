@@ -9,6 +9,7 @@
         "online": "https://forum.arduino.cc/index.php?topic=386733"
       },
       "platforms": [
+    {
           "name": "Carduino",
           "architecture": "avr",
           "version": "1.0.0",
