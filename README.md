@@ -63,7 +63,7 @@ Some of the key benfites and changes made by these bootloaders can be found belo
   
  
 ## Bootloader Features<br>
-  **BOD option**<br>
+  ###BOD option
 Brown out detection, or BOD for short lets the microcontroller sense the input voltage and shut down if the voltage goes below the brown out setting. To change the BOD settings you'll have to connect an ISP programmer and hit "Burn bootloader". Below is a table that shows the available choices:
 <br>
 
@@ -77,7 +77,7 @@ Brown out detection, or BOD for short lets the microcontroller sense the input v
 <BR><BR>
 
 
- **Printf support**<br>
+ ###Printf support
 Unlike official Arduino core, Carduino has native support for printf with out any additional libraries. If you're not familiar with printf you can read more about it [HERE](https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm). Printf has been added to the Print class and will work with any library that inherit Print. Printf is a standard C function that lets you display formated text much easier than using Arduino's built-in print and println. <br>
   *Note - The included printf support does NOT support the use of floats or doubles. <br>This is a limitation of the avr-libc printf implementation on AVR microcontrollers.<br><br>
 
