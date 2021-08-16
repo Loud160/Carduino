@@ -1,12 +1,20 @@
 {
   "packages": [
-    {
+    { 
+      "name": "Carduino",
+      "maintainer": "Loud160",
+      "websiteURL": "https://github.com/Loud160/Carduino",
+      "email": "",
+      "help": {
+        "online": "https://forum.arduino.cc/index.php?topic=386733"
+      },
+      "platforms": [
           "name": "Carduino",
           "architecture": "avr",
           "version": "1.0.0",
           "category": "Contributed",
-          "url": "https://raw.githubusercontent.com/Loud160/Carduino/main/Carduino-1.0.0.tar.gz",
-          "archiveFileName": "Carduino-1.0.0.tar.gz",
+          "url": "https://raw.githubusercontent.com/Loud160/Carduino/main/Carduino-1.0.0.tar.bz2",
+          "archiveFileName": "Carduino-1.0.0.tar.bz2",
           "checksum": "SHA-256:943833353f5d7d815fd66f9bb827a9cfd3823cc36ce91cb026ac8033f4d4df96",
           "size": "3022399",
           "boards": [
