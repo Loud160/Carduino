@@ -16,13 +16,6 @@ Carduino is the first Arduino based expansion board that has been designed specf
   - [Link time optimization](#Link-time-optimization)
   - [Wiring Reference(wiring.h)](#Wiring-Reference(wiring.h))
   - [Pin Macros](#Pin-Macros)
-* [EEPROM retain option](#eeprom-option)
-* [Link time optimization / LTO](#link-time-optimization--lto)
-* [Printf support](#printf-support)
-* [Pin macros](#pin-macros)
-* [PROGMEM with flash sizes greater than 64kB](#progmem-with-flash-sizes-greater-than-64kb)
-* [Write to own flash](#write-to-own-flash)
-* [Programmers](#programmers)
 * **[How to install](#how-to-install)**
   - [Boards Manager Installation](#boards-manager-installation)
   - [Manual Installation](#manual-installation)
