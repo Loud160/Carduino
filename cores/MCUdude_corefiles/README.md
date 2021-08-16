@@ -18,7 +18,8 @@ micros, delay, delayMicroseconds)
 * 8 MHz
 * 4 MHz
 * 1 MHz
- <br>
+
+
 Internal Clock speeds that are usable but may not provide accurate timing for (millis,
 micros, delay, delayMicroseconds)
 * 8 MHz
