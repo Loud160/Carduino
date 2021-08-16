@@ -10,16 +10,16 @@ This repo contains the Arduino corefiles used with **Carduino**.
 
 ## Supported clock frequencies
 
-Clock speeds that produce accurate timing for (millis,
-micros, delay, delayMicroseconds)(External Clocks)
+External Clock speeds that produce accurate timing for (millis,
+micros, delay, delayMicroseconds)
 * 20 MHz
 * 16 MHz
 * 12 MHz
 * 8 MHz
 * 4 MHz
 * 1 MHz
-Clock speeds that are usable but may not provide accurate timing for (millis,
-micros, delay, delayMicroseconds)(Internal Clocks)
+Internal Clock speeds that are usable but may not provide accurate timing for (millis,
+micros, delay, delayMicroseconds)
 * 8 MHz
 * 4 MHz
 * 1 MHz
