@@ -100,7 +100,7 @@ I encourage you to try the new LTO option and see how much smaller your code get
   
   
 **Wiring Reference(wiring.h)**<BR>>
-Thanks to improvments made by Megacore several Wiring functions that are missing from the Arduino core have been added to enhance this core's functionality a bit further. These functions can be used as "regular" Arduino functions, there's no need to include an external library. A list for the missing Wiring functions used in the ATMega2560 chip can be found below. <br>
+Thanks to improvments made by Megacore several Wiring functions that are missing from the Arduino core have been added to enhance this core's functionality a bit further. These functions can be used as "regular" Arduino functions, there's no need to include an external library. A list for the missing Wiring functions used in the ATMega2560 chip can be found below. <br><BR>
 **Function list**
 * portMode()
 * portRead()
@@ -110,7 +110,7 @@ Thanks to improvments made by Megacore several Wiring functions that are missing
 * noSleep()
 * enablePower()
 * disablePower() 
-
+<BR><BR><BR>
 
 
 
