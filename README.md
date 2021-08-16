@@ -78,6 +78,14 @@ Brown out detection, or BOD for short lets the microcontroller sense the input v
 <BR><BR>
 
 
+ **Printf support**<br>
+Unlike official Arduino core, Carduino has native support for printf with out any additional libraries. If you're not familiar with printf you can read more about it [HERE](https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm). Printf has been added to the Print class and will work with any library that inherit Print. Printf is a standard C function that lets you display formated text much easier than using Arduino's built-in print and println. <br>
+  *Note - The included printf support does NOT support the use of floats or doubles. This is a limitation of the avr-libc printf implementation on AVR microcontrollers.
+
+To display formated information, simply use `Serial.printf("Time since start: %ld\n", millis());`. The printf function makes is easy to display information on most types of LED and OLED displays. A few of the libraries it works well with are the LiquidCrystal LCD library and the U8G2 graphical LCD library.
+  <br><br>
+  
+  
 **EEPROM option**<br>
 If you want the EEPROM to be erased every time you burn the bootloader or upload using a programmer, you can turn off this option. You'll have to connect an ISP programmer and hit "Burn bootloader" to enable or disable EEPROM retain. Note that when uploading using a bootloader, the EEPROM will always be retained.
 
@@ -87,10 +95,7 @@ After Arduino IDE 1.6.11 where released, there have been support for link time o
 I encourage you to try the new LTO option and see how much smaller your code gets! Note that you don't need to hit "Burn Bootloader" in order to enable LTO. Simply enable it in the "Tools" menu, and your code is ready for compilation. If you want to read more about LTO and GCC flags in general, head over to the [GNU GCC website](https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html)!
 
 
-## Printf support
-Unlike the official Arduino cores, MegaCore has printf support out of the box. If you're not familiar with printf you should probably [read this first](https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm). It's added to the Print class and will work with all libraries that inherit Print. Printf is a standard C function that lets you format text much easier than using Arduino's built-in print and println. Note that this implementation of printf will NOT print floats or doubles. This is a limitation of the avr-libc printf implementation on AVR microcontrollers, and nothing I can easily fix.
 
-If you're using a serial port, simply use `Serial.printf("Milliseconds since start: %ld\n", millis());`. Other libraries that inherit the Print class (and thus supports printf) are the LiquidCrystal LCD library and the U8G2 graphical LCD library.
 
 
 ## Pin macros
