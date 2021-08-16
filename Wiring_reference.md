@@ -1,5 +1,5 @@
 # Wiring reference
-To extend this core's functionality a bit further, I've added a few missing Wiring functions. As many of you know Arduino is based on Wiring, but that doesn't mean the Wiring development isn't active. These functions is used as "regular" Arduino functions, and there's no need to include an external library.
+To extend this core's functionality a bit further, a few missing Wiring functions have been added. As many of you know Arduino is based on Wiring, but that doesn't mean the Wiring development isn't active. These functions are used as "regular" Arduino functions, and there's no need to include an external library.
 
 ## Content
 * [portMode](#portmode)()
