@@ -1,0 +1,28 @@
+#######################################
+# Syntax Coloring Map 
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+timerStart	KEYWORD2
+sendMsg 	KEYWORD2
+writeMsg	KEYWORD2
+msgSize	KEYWORD2
+readMsg	KEYWORD2
+msgBuffer	KEYWORD2
+Debug	KEYWORD2
+setCallback	KEYWORD2
+showFrame	KEYWORD2
+printFrame	KEYWORD2
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+OUTPUT_OPEN_DRAIN	LITERAL1
+INPUT_ANALOG	LITERAL1
+INPUT_PULLDOWN	LITERAL1
+PWM	LITERAL1
