@@ -12,12 +12,12 @@
     {
           "name": "Carduino",
           "architecture": "avr",
-          "version": "1.0.1",
+          "version": "1.0.0",
           "category": "Contributed",
-          "url": "https://raw.githubusercontent.com/Loud160/Carduino/main/Carduino.tar.gz",
-          "archiveFileName": "Carduino.tar.gz",
-          "checksum": "SHA-256:d44705d1e4a3c24897b806636041d242e5f0ba7f3f423a2b5455a13122ce3028",
-          "size": "1207013",
+          "url": "https://raw.githubusercontent.com/Loud160/Carduino/main/Carduino-1.0.0.tar.gz",
+          "archiveFileName": "Carduino-1.0.0.tar.gz",
+          "checksum": "SHA-256:1cd155a4917784bf20f2761fcbec285480214b3d799b35520b16707d98e4b6fd",
+          "size": "3015886",
           "boards": [
             {
               "name": "Carduino v1.0 W/MEGA2560 Pro"
