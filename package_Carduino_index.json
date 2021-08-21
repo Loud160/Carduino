@@ -4,6 +4,7 @@
       "name": "Carduino",
       "maintainer": "PeteS",
       "websiteURL": "https://github.com/Loud160/Carduino",
+       "version": "1.0.3",
       "email": "",
       "help": {
         "online": "https://forum.arduino.cc/index.php?topic=386733"
