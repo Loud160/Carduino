@@ -4,13 +4,44 @@
       "name": "Carduino",
       "maintainer": "PeteS",
       "websiteURL": "https://github.com/Loud160/Carduino",
-       "version": "1.0.3",
       "email": "",
       "help": {
         "online": "https://forum.arduino.cc/index.php?topic=386733"
       },
       "platforms": [
     {
+          "name": "Carduino",
+          "architecture": "avr",
+          "version": "1.0.2",
+          "category": "Contributed",
+          "url": "https://raw.githubusercontent.com/Loud160/Carduino/main/Carduino-1.0.3.tar.gz",
+          "archiveFileName": "Carduino-1.0.2.tar.gz",
+          "checksum": "SHA-256:6655cc2ce6b5ab522e8473e89c5c81ab19a83b65b056d7221da890cff4bfa9f5",
+          "size": "1298472",
+          "boards": [
+            {
+              "name": "Carduino MEGA Pro v1.0 "
+            }
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "avr-gcc",
+              "version": "7.3.0-atmel3.6.1-arduino7"
+            },
+            {
+              "packager": "arduino",
+              "name": "avrdude",
+              "version": "6.3.0-arduino18"
+            },
+            {
+              "packager": "arduino",
+              "name": "arduinoOTA",
+              "version": "1.3.0"
+            }
+          ]
+        },
+		{
           "name": "Carduino",
           "architecture": "avr",
           "version": "1.0.3",
