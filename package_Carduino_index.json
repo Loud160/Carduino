@@ -48,8 +48,8 @@
           "category": "Contributed",
           "url": "https://raw.githubusercontent.com/Loud160/Carduino/main/Carduino-1.0.3.tar.gz",
           "archiveFileName": "Carduino-1.0.3.tar.gz",
-          "checksum": "SHA-256:6655cc2ce6b5ab522e8473e89c5c81ab19a83b65b056d7221da890cff4bfa9f5",
-          "size": "1298472",
+          "checksum": "SHA-256:1a1b87e922ccc96b54389bc8c94cdcdc394dff5ef78fe04e6a6c5cae8d1ef947",
+          "size": "1298396",
           "boards": [
             {
               "name": "Carduino MEGA Pro v1.0 "
