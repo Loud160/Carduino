@@ -43,7 +43,7 @@ menu.bootloader=Bootloader
 #####################
 
 # General
-2560.name=Carduino v1.0 using Mega2560 PRO
+2560.name=Carduino MEGA Pro v1.0
 2560.upload.tool=avrdude
 2560.upload.maximum_data_size=8192
 2560.bootloader.tool=avrdude
